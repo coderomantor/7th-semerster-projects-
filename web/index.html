@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Exam System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Online Exam System</h1>
+      <p class="subtitle">10-question MCQ · 5 minutes · No frameworks</p>
+    </header>
+
+    <main>
+      <section id="start-screen" class="card center">
+        <h2>Ready to start?</h2>
+        <p>Click the button below to begin the exam. The timer will start immediately.</p>
+        <button id="start-btn" class="btn primary">Start Exam</button>
+      </section>
+
+      <section id="quiz-screen" class="card hidden">
+        <div class="quiz-header">
+          <div id="timer">05:00</div>
+          <button id="submit-btn" class="btn danger">Submit</button>
+        </div>
+        <form id="quiz-form" novalidate>
+          <div id="questions"></div>
+        </form>
+      </section>
+
+      <section id="result-screen" class="card hidden">
+        <h2>Your Result</h2>
+        <div id="score"></div>
+        <div id="answers-list"></div>
+        <button id="restart-btn" class="btn">Take Again</button>
+      </section>
+    </main>
+
+    <footer class="footer">Good luck — do your best!</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
